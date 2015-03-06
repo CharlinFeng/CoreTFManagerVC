@@ -77,6 +77,14 @@
     [CoreTFManagerVC uninstallManagerForVC:self];
   }
   
+  
+##示例截图
+![image](./CoreTFManagerVC/Cut/1.png)<br />
+![image](./CoreTFManagerVC/Cut/2.png)<br />
+![image](./CoreTFManagerVC/Cut/3.png)<br />
+<br /><br />
+  
+  
 
 
 <br /><br />
