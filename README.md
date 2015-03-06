@@ -49,35 +49,35 @@
 
 ##使用示例
     //安装：请在viewDidAppear中完成
-  -(void)viewDidAppear:(BOOL)animated{
+    -(void)viewDidAppear:(BOOL)animated{
     
-    [super viewDidAppear:animated];
+        [super viewDidAppear:animated];
     
-    [CoreTFManagerVC installManagerForVC:self scrollView:self.scrollView tfModels:^NSArray *{
-        UIDatePicker *picker=[[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
-
+        [CoreTFManagerVC installManagerForVC:self scrollView:self.scrollView tfModels:^NSArray *{
+            UIDatePicker *picker=[[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+    
+            
+            TFModel *tfm1=[TFModel modelWithTextFiled:_tf1 inputView:nil name:@"tf1" insetBottom:0];
+            TFModel *tfm2=[TFModel modelWithTextFiled:_tf2 inputView:picker name:@"tf2" insetBottom:0];
+            TFModel *tfm3=[TFModel modelWithTextFiled:_tf3 inputView:nil name:@"tf3" insetBottom:30];
+            TFModel *tfm4=[TFModel modelWithTextFiled:_tf4 inputView:nil name:@"tf4" insetBottom:0];
+            TFModel *tfm5=[TFModel modelWithTextFiled:_tf5 inputView:nil name:@"tf5" insetBottom:0];
+            TFModel *tfm6=[TFModel modelWithTextFiled:_tf6 inputView:nil name:@"tf6" insetBottom:0];
+            
+            return @[tfm1,tfm2,tfm3,tfm4,tfm5,tfm6];
         
-        TFModel *tfm1=[TFModel modelWithTextFiled:_tf1 inputView:nil name:@"tf1" insetBottom:0];
-        TFModel *tfm2=[TFModel modelWithTextFiled:_tf2 inputView:picker name:@"tf2" insetBottom:0];
-        TFModel *tfm3=[TFModel modelWithTextFiled:_tf3 inputView:nil name:@"tf3" insetBottom:30];
-        TFModel *tfm4=[TFModel modelWithTextFiled:_tf4 inputView:nil name:@"tf4" insetBottom:0];
-        TFModel *tfm5=[TFModel modelWithTextFiled:_tf5 inputView:nil name:@"tf5" insetBottom:0];
-        TFModel *tfm6=[TFModel modelWithTextFiled:_tf6 inputView:nil name:@"tf6" insetBottom:0];
+        }];
+    }
+  
+    //卸载：请在viewDidDisappear中完成
+    -(void)viewDidDisappear:(BOOL)animated{
         
-        return @[tfm1,tfm2,tfm3,tfm4,tfm5,tfm6];
+        [super viewDidDisappear:animated];
         
-    }];
-  }
+        [CoreTFManagerVC uninstallManagerForVC:self];
+    }
   
-  //卸载：请在viewDidDisappear中完成
-  -(void)viewDidDisappear:(BOOL)animated{
-    
-    [super viewDidDisappear:animated];
-    
-    [CoreTFManagerVC uninstallManagerForVC:self];
-  }
-  
-  
+  <br /><br />
 ##示例截图
 ![image](./CoreTFManagerVC/Cut/1.png)<br />
 ![image](./CoreTFManagerVC/Cut/2.png)<br />
