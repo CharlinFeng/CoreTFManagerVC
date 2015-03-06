@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  HomeTVC.h
 //  CoreTFManagerVC
 //
 //  Created by 沐汐 on 15-3-5.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface HomeTVC : UITableViewController
 
 @end
-

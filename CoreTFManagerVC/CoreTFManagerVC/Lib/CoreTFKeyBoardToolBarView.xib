@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="QKa-Ru-iUd" customClass="CoreTFKeyBoardToolBarView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59b-R0-Mo4">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <items/>
+                </toolbar>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-MM-xGA">
+                    <rect key="frame" x="15" y="0.0" width="54" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="上一个">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="preBtnClick:" destination="QKa-Ru-iUd" eventType="touchUpInside" id="4NE-uV-1sk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDV-Fg-gDK">
+                    <rect key="frame" x="99" y="0.0" width="54" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="下一个">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextBtnClick:" destination="QKa-Ru-iUd" eventType="touchUpInside" id="Y28-Pr-9eY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdu-VB-95p">
+                    <rect key="frame" x="549" y="0.0" width="36" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="完成">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doneBtnClick:" destination="QKa-Ru-iUd" eventType="touchUpInside" id="9fD-j1-J5M"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.792156862745098" green="0.80392156862745101" blue="0.82745098039215681" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qDV-Fg-gDK" firstAttribute="leading" secondItem="dNU-MM-xGA" secondAttribute="trailing" constant="30" id="3sX-4b-fnF"/>
+                <constraint firstItem="59b-R0-Mo4" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="9aW-Os-RZh"/>
+                <constraint firstItem="dNU-MM-xGA" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="HUi-mY-ali"/>
+                <constraint firstItem="Wdu-VB-95p" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="JWD-DT-3Un"/>
+                <constraint firstAttribute="bottom" secondItem="dNU-MM-xGA" secondAttribute="bottom" id="QDq-ia-Hlc"/>
+                <constraint firstAttribute="bottom" secondItem="qDV-Fg-gDK" secondAttribute="bottom" id="YtF-cd-IVc"/>
+                <constraint firstItem="qDV-Fg-gDK" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="boJ-LT-CKf"/>
+                <constraint firstItem="dNU-MM-xGA" firstAttribute="leading" secondItem="QKa-Ru-iUd" secondAttribute="leading" constant="15" id="dbR-9I-Aem"/>
+                <constraint firstAttribute="bottom" secondItem="Wdu-VB-95p" secondAttribute="bottom" id="ek8-0z-iG0"/>
+                <constraint firstAttribute="bottom" secondItem="59b-R0-Mo4" secondAttribute="bottom" id="fib-iI-BGA"/>
+                <constraint firstItem="59b-R0-Mo4" firstAttribute="leading" secondItem="QKa-Ru-iUd" secondAttribute="leading" id="get-w3-MY6"/>
+                <constraint firstAttribute="trailing" secondItem="Wdu-VB-95p" secondAttribute="trailing" constant="15" id="muE-gL-yyM"/>
+                <constraint firstAttribute="trailing" secondItem="59b-R0-Mo4" secondAttribute="trailing" id="oCu-hI-SHP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="nextBtn" destination="qDV-Fg-gDK" id="UV9-Y9-IEn"/>
+                <outlet property="preBtn" destination="dNU-MM-xGA" id="hYT-Hl-cUB"/>
+            </connections>
+            <point key="canvasLocation" x="467" y="340"/>
+        </view>
+    </objects>
+</document>

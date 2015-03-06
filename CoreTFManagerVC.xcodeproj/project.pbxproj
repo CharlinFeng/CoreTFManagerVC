@@ -9,11 +9,23 @@
 /* Begin PBXBuildFile section */
 		D6D2395A1AA89BDF003B999A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D239591AA89BDF003B999A /* main.m */; };
 		D6D2395D1AA89BDF003B999A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D2395C1AA89BDF003B999A /* AppDelegate.m */; };
-		D6D239601AA89BDF003B999A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D2395F1AA89BDF003B999A /* ViewController.m */; };
 		D6D239631AA89BDF003B999A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D239611AA89BDF003B999A /* Main.storyboard */; };
 		D6D239651AA89BDF003B999A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D239641AA89BDF003B999A /* Images.xcassets */; };
 		D6D239681AA89BDF003B999A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D239661AA89BDF003B999A /* LaunchScreen.xib */; };
 		D6D239741AA89BDF003B999A /* CoreTFManagerVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D239731AA89BDF003B999A /* CoreTFManagerVCTests.m */; };
+		D6D2397F1AA89CB8003B999A /* HomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D2397E1AA89CB8003B999A /* HomeTVC.m */; };
+		D6D239831AA89DFA003B999A /* NormalViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D239811AA89DFA003B999A /* NormalViewVC.m */; };
+		D6D239841AA89DFA003B999A /* NormalViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D239821AA89DFA003B999A /* NormalViewVC.xib */; };
+		D6D239881AA8A3CF003B999A /* CoreTFManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D239871AA8A3CF003B999A /* CoreTFManagerVC.m */; };
+		D6D2398C1AA8A6FB003B999A /* TFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D2398B1AA8A6FB003B999A /* TFModel.m */; };
+		EE5A8A5B1AA989C8000BA4AE /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5A8A581AA989C8000BA4AE /* 1.png */; };
+		EE5A8A5C1AA989C8000BA4AE /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5A8A591AA989C8000BA4AE /* 2.png */; };
+		EE5A8A5D1AA989C8000BA4AE /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5A8A5A1AA989C8000BA4AE /* 3.png */; };
+		EE63201E1AA943DF007BE4FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE63201D1AA943DF007BE4FB /* UIKit.framework */; };
+		EE6320221AA94768007BE4FB /* CoreTFKeyBoardToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6320201AA94768007BE4FB /* CoreTFKeyBoardToolBarView.m */; };
+		EE6320231AA94768007BE4FB /* CoreTFKeyBoardToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE6320211AA94768007BE4FB /* CoreTFKeyBoardToolBarView.xib */; };
+		EE6320291AA954AA007BE4FB /* ScrollViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6320281AA954AA007BE4FB /* ScrollViewVC.m */; };
+		EE63202B1AA954B9007BE4FB /* ScrollViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE63202A1AA954B9007BE4FB /* ScrollViewVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +44,31 @@
 		D6D239591AA89BDF003B999A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6D2395B1AA89BDF003B999A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6D2395C1AA89BDF003B999A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D6D2395E1AA89BDF003B999A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D6D2395F1AA89BDF003B999A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D6D239621AA89BDF003B999A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6D239641AA89BDF003B999A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D6D239671AA89BDF003B999A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D6D2396D1AA89BDF003B999A /* CoreTFManagerVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTFManagerVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D239721AA89BDF003B999A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D239731AA89BDF003B999A /* CoreTFManagerVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTFManagerVCTests.m; sourceTree = "<group>"; };
+		D6D2397D1AA89CB8003B999A /* HomeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTVC.h; sourceTree = "<group>"; };
+		D6D2397E1AA89CB8003B999A /* HomeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTVC.m; sourceTree = "<group>"; };
+		D6D239801AA89DFA003B999A /* NormalViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalViewVC.h; sourceTree = "<group>"; };
+		D6D239811AA89DFA003B999A /* NormalViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalViewVC.m; sourceTree = "<group>"; };
+		D6D239821AA89DFA003B999A /* NormalViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalViewVC.xib; sourceTree = "<group>"; };
+		D6D239861AA8A3CF003B999A /* CoreTFManagerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTFManagerVC.h; sourceTree = "<group>"; };
+		D6D239871AA8A3CF003B999A /* CoreTFManagerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTFManagerVC.m; sourceTree = "<group>"; };
+		D6D2398A1AA8A6FB003B999A /* TFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFModel.h; sourceTree = "<group>"; };
+		D6D2398B1AA8A6FB003B999A /* TFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFModel.m; sourceTree = "<group>"; };
+		EE5A8A581AA989C8000BA4AE /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		EE5A8A591AA989C8000BA4AE /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		EE5A8A5A1AA989C8000BA4AE /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		EE63201D1AA943DF007BE4FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EE63201F1AA94768007BE4FB /* CoreTFKeyBoardToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTFKeyBoardToolBarView.h; sourceTree = "<group>"; };
+		EE6320201AA94768007BE4FB /* CoreTFKeyBoardToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTFKeyBoardToolBarView.m; sourceTree = "<group>"; };
+		EE6320211AA94768007BE4FB /* CoreTFKeyBoardToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreTFKeyBoardToolBarView.xib; sourceTree = "<group>"; };
+		EE6320271AA954AA007BE4FB /* ScrollViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewVC.h; sourceTree = "<group>"; };
+		EE6320281AA954AA007BE4FB /* ScrollViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewVC.m; sourceTree = "<group>"; };
+		EE63202A1AA954B9007BE4FB /* ScrollViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollViewVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE63201E1AA943DF007BE4FB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,11 +111,18 @@
 		D6D239561AA89BDF003B999A /* CoreTFManagerVC */ = {
 			isa = PBXGroup;
 			children = (
+				D6D239851AA8A3C1003B999A /* CoreTFManagerVC */,
 				D6D2395B1AA89BDF003B999A /* AppDelegate.h */,
 				D6D2395C1AA89BDF003B999A /* AppDelegate.m */,
-				D6D2395E1AA89BDF003B999A /* ViewController.h */,
-				D6D2395F1AA89BDF003B999A /* ViewController.m */,
 				D6D239611AA89BDF003B999A /* Main.storyboard */,
+				D6D2397D1AA89CB8003B999A /* HomeTVC.h */,
+				D6D2397E1AA89CB8003B999A /* HomeTVC.m */,
+				D6D239801AA89DFA003B999A /* NormalViewVC.h */,
+				D6D239811AA89DFA003B999A /* NormalViewVC.m */,
+				D6D239821AA89DFA003B999A /* NormalViewVC.xib */,
+				EE6320271AA954AA007BE4FB /* ScrollViewVC.h */,
+				EE6320281AA954AA007BE4FB /* ScrollViewVC.m */,
+				EE63202A1AA954B9007BE4FB /* ScrollViewVC.xib */,
 				D6D239641AA89BDF003B999A /* Images.xcassets */,
 				D6D239661AA89BDF003B999A /* LaunchScreen.xib */,
 				D6D239571AA89BDF003B999A /* Supporting Files */,
@@ -96,6 +133,8 @@
 		D6D239571AA89BDF003B999A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE5A8A571AA988F1000BA4AE /* Cut */,
+				EE63201D1AA943DF007BE4FB /* UIKit.framework */,
 				D6D239581AA89BDF003B999A /* Info.plist */,
 				D6D239591AA89BDF003B999A /* main.m */,
 			);
@@ -117,6 +156,38 @@
 				D6D239721AA89BDF003B999A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6D239851AA8A3C1003B999A /* CoreTFManagerVC */ = {
+			isa = PBXGroup;
+			children = (
+				D6D239891AA8A6E1003B999A /* Lib */,
+				D6D239861AA8A3CF003B999A /* CoreTFManagerVC.h */,
+				D6D239871AA8A3CF003B999A /* CoreTFManagerVC.m */,
+			);
+			path = CoreTFManagerVC;
+			sourceTree = "<group>";
+		};
+		D6D239891AA8A6E1003B999A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				EE63201F1AA94768007BE4FB /* CoreTFKeyBoardToolBarView.h */,
+				EE6320201AA94768007BE4FB /* CoreTFKeyBoardToolBarView.m */,
+				EE6320211AA94768007BE4FB /* CoreTFKeyBoardToolBarView.xib */,
+				D6D2398A1AA8A6FB003B999A /* TFModel.h */,
+				D6D2398B1AA8A6FB003B999A /* TFModel.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		EE5A8A571AA988F1000BA4AE /* Cut */ = {
+			isa = PBXGroup;
+			children = (
+				EE5A8A581AA989C8000BA4AE /* 1.png */,
+				EE5A8A591AA989C8000BA4AE /* 2.png */,
+				EE5A8A5A1AA989C8000BA4AE /* 3.png */,
+			);
+			path = Cut;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +270,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE6320231AA94768007BE4FB /* CoreTFKeyBoardToolBarView.xib in Resources */,
 				D6D239631AA89BDF003B999A /* Main.storyboard in Resources */,
+				EE5A8A5C1AA989C8000BA4AE /* 2.png in Resources */,
+				EE5A8A5D1AA989C8000BA4AE /* 3.png in Resources */,
 				D6D239681AA89BDF003B999A /* LaunchScreen.xib in Resources */,
+				D6D239841AA89DFA003B999A /* NormalViewVC.xib in Resources */,
+				EE63202B1AA954B9007BE4FB /* ScrollViewVC.xib in Resources */,
 				D6D239651AA89BDF003B999A /* Images.xcassets in Resources */,
+				EE5A8A5B1AA989C8000BA4AE /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D239601AA89BDF003B999A /* ViewController.m in Sources */,
 				D6D2395D1AA89BDF003B999A /* AppDelegate.m in Sources */,
+				D6D2398C1AA8A6FB003B999A /* TFModel.m in Sources */,
+				EE6320221AA94768007BE4FB /* CoreTFKeyBoardToolBarView.m in Sources */,
+				D6D239881AA8A3CF003B999A /* CoreTFManagerVC.m in Sources */,
+				EE6320291AA954AA007BE4FB /* ScrollViewVC.m in Sources */,
 				D6D2395A1AA89BDF003B999A /* main.m in Sources */,
+				D6D239831AA89DFA003B999A /* NormalViewVC.m in Sources */,
+				D6D2397F1AA89CB8003B999A /* HomeTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoreTFManagerVC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoreTFManagerVC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +496,7 @@
 				D6D239791AA89BDF003B999A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6D2397A1AA89BDF003B999A /* Build configuration list for PBXNativeTarget "CoreTFManagerVCTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +505,7 @@
 				D6D2397C1AA89BDF003B999A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

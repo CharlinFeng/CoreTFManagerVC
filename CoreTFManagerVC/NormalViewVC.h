@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NormalViewVC.h
 //  CoreTFManagerVC
 //
 //  Created by 沐汐 on 15-3-5.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NormalViewVC : UIViewController
 
 @end
-
