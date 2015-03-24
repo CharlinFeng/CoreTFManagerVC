@@ -32,6 +32,13 @@
 +(void)uninstallManagerForVC:(UIViewController *)vc;
 
 
+/**
+ *  空值校验
+ *  
+ *  @param tfModels  textField包装模型数组
+ *  @return 如果没有textField存在空值，返回nil；如果有textField为空，则返回对应的TFModel模型
+ */
++(TFModel *)checkNullValueInTFModels:(NSArray *)tfModels;
 
 
 @end

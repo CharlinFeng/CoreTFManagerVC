@@ -54,6 +54,7 @@
 @implementation CoreTFManagerVC
 
 
+
 /**
  *  安装
  *
@@ -72,17 +73,9 @@
     
     if(tfModels!=nil) tfModelsArray=tfModels();
 
-    if(tfModelsArray==nil || tfModelsArray.count==0){
-        NSLog(@"CoreTFManagerVC：安装失败，您传入的textField数组不合法，没有数据");
-        return;
-    }
+    BOOL res=[self checkTFModels:tfModelsArray];
     
-    for (id obj in tfModelsArray) {
-        if([obj isKindOfClass:[TFModel class]]) continue;
-        NSLog(@"CoreTFManagerVC：安装失败，tfModels数组内部的对象不是TFModel模型对象");
-        return;
-    }
-    
+    if(!res) return;
     
     CoreTFManagerVC *tfManagerVC=[[CoreTFManagerVC alloc] init];
     
@@ -100,6 +93,30 @@
     
     //注册键盘监听
     [tfManagerVC keyboardObserver];
+}
+
+/**
+ *  数据合法性校验
+ */
++(BOOL)checkTFModels:(NSArray *)tfModels{
+    
+    if(tfModels==nil || tfModels.count==0){
+        
+        NSLog(@"CoreTFManagerVC：安装失败，您传入的textField数组不合法，没有数据");
+        
+        return NO;
+    }
+
+    for (id obj in tfModels) {
+        
+        if([obj isKindOfClass:[TFModel class]]) continue;
+        
+        NSLog(@"CoreTFManagerVC：安装失败，tfModels数组内部的对象不是TFModel模型对象");
+        
+        return NO;
+    }
+    
+    return YES;
 }
 
 
@@ -212,7 +229,7 @@
         //1.将文本框直接置顶
         CGFloat testFieldX = self.scrollView.contentOffset.x;
         //下移动:
-        CGFloat textFieldY =CGRectGetMaxY(self.currentTFModel.textField.frame) -(self.screenH - self.scrollWindowFrameY - self.keyBoardHeight - insetBottom);
+        CGFloat textFieldY =CGRectGetMaxY(self.currentTFModel.textFieldScrollFrame) -(self.screenH - self.scrollWindowFrameY - self.keyBoardHeight - insetBottom);
         
         if(ios6x) textFieldY+=20.0f;
         
@@ -229,7 +246,7 @@
                 //动画曲线
                 [UIView setAnimationCurve:_keyBoardCurve];
                 
-                [self.scrollView scrollRectToVisible:self.currentTFModel.textField.frame animated:NO];
+                [self.scrollView scrollRectToVisible:self.currentTFModel.textFieldScrollFrame animated:NO];
                 
                 self.scrollView.contentOffset=contentOffset;
             }];
@@ -274,6 +291,9 @@
         
         //textField在window中的frame
         tfm.textFiledWindowFrame = [self.window convertRect:textField.frame fromView:textField.superview];
+        
+        //textField在scrollView中的frame
+        if(self.scrollView!=nil) tfm.textFieldScrollFrame=[self.scrollView convertRect:textField.frame fromView:textField.superview];
         
         //scrollView在window中的frame
         if(self.scrollView!=nil && self.scrollWindowFrameY==0) self.scrollWindowFrameY = [self.window convertRect:self.scrollView.frame fromView:self.scrollView.superview].origin.y;
@@ -334,7 +354,7 @@
                     [UIView animateWithDuration:weakSelf.keyBoardDuration animations:^{
                         //动画曲线
                         [UIView setAnimationCurve:weakSelf.keyBoardCurve];
-                        [weakSelf.scrollView scrollRectToVisible:weakSelf.currentTFModel.textField.frame animated:NO];
+                        [weakSelf.scrollView scrollRectToVisible:weakSelf.currentTFModel.textFieldScrollFrame animated:NO];
                         
                         weakSelf.scrollView.contentOffset=offset;
                     }];
@@ -355,12 +375,17 @@
     
     //获取当前的index
     NSUInteger index=[self.tfModels indexOfObject:self.currentTFModel];
-    if(index>self.tfModels.count) index=0;
+    NSUInteger count=self.tfModels.count;
+    if(index>count) index=0;
     
     NSInteger i=isPre?-1:1;
+    NSInteger nextIndex=index + i;
+    if(nextIndex<0)nextIndex=0;
+    if(nextIndex>=count) nextIndex=count-1;
+    
     
     //下一个输入框获取焦点
-    TFModel *tfModel=self.tfModels[index + i];
+    TFModel *tfModel=self.tfModels[nextIndex];
 
     //优化不同键盘的动画
     if(self.currentTFModel.inputView!=tfModel.inputView){
@@ -432,6 +457,32 @@
     
 }
 
+
+
+/**
+ *  空值校验
+ *
+ *  @param tfModels  textField包装模型数组
+ *  @return 如果没有textField存在空值，返回nil；如果有textField为空，则返回对应的TFModel模型
+ */
++(TFModel *)checkNullValueInTFModels:(NSArray *)tfModels{
+    
+    //数据合法性校验
+    BOOL res=[self checkTFModels:tfModels];
+    
+    if(!res) return [[TFModel alloc] init];
+    
+    //遍历
+    for (TFModel *tfModel in tfModels) {
+        if([tfModel.textField.text isEqualToString:@""]) return tfModel;
+    }
+    
+    return nil;
+}
+
+
+
+
 -(void)dealloc{
     
     //移除通知
@@ -448,8 +499,6 @@
     self.scrollView=nil;
     
     self.tfModels=nil;
-    
-    NSLog(@"CoreTFManagerVC已经被安全释放！");
 }
 
 

@@ -20,6 +20,9 @@
 //textField在window中的frame
 @property (nonatomic,assign) CGRect textFiledWindowFrame;
 
+//textField在scrollView中的frame
+@property (nonatomic,assign) CGRect textFieldScrollFrame;
+
 //底部需要增加的距离
 @property (nonatomic,assign) CGFloat insetBottom;
 
