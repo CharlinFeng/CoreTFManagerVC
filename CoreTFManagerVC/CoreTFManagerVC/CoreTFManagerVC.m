@@ -171,6 +171,9 @@
     
     [self.currentTFModel.textField resignFirstResponder];
     
+    //如果有scrollView，需要考虑恢复scrollView的状态
+    if(self.scrollView!=nil) self.keyBoardToolBarView.doneClickBlock();
+    
     return YES;
 }
 
