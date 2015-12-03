@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,12 +13,18 @@
             <subviews>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59b-R0-Mo4">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <animations/>
                     <items/>
                 </toolbar>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-MM-xGA">
-                    <rect key="frame" x="15" y="0.0" width="54" height="44"/>
+                    <rect key="frame" x="15" y="13" width="10" height="18"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="上一个">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="FBH-2k-E1y"/>
+                        <constraint firstAttribute="width" constant="10" id="JP0-77-JvF"/>
+                    </constraints>
+                    <state key="normal" image="CoreTFManagerVC.bundle/left.png">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -34,9 +40,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDV-Fg-gDK">
-                    <rect key="frame" x="99" y="0.0" width="54" height="44"/>
+                    <rect key="frame" x="55" y="13" width="10" height="18"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="下一个">
+                    <state key="normal" image="CoreTFManagerVC.bundle/right.png">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -52,6 +59,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdu-VB-95p">
                     <rect key="frame" x="549" y="0.0" width="36" height="44"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" title="完成">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -64,29 +72,56 @@
                         <action selector="doneBtnClick:" destination="QKa-Ru-iUd" eventType="touchUpInside" id="9fD-j1-J5M"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCy-rO-SOg">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
+            <animations/>
             <color key="backgroundColor" red="0.792156862745098" green="0.80392156862745101" blue="0.82745098039215681" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="qDV-Fg-gDK" firstAttribute="leading" secondItem="dNU-MM-xGA" secondAttribute="trailing" constant="30" id="3sX-4b-fnF"/>
-                <constraint firstItem="59b-R0-Mo4" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="9aW-Os-RZh"/>
+                <constraint firstItem="dNU-MM-xGA" firstAttribute="leading" secondItem="59b-R0-Mo4" secondAttribute="trailing" id="1dE-Yb-6QV"/>
+                <constraint firstAttribute="bottom" secondItem="qCy-rO-SOg" secondAttribute="bottom" id="3cA-Q4-IpJ"/>
+                <constraint firstItem="dNU-MM-xGA" firstAttribute="centerY" secondItem="QKa-Ru-iUd" secondAttribute="centerY" id="AfW-Y8-gvP"/>
+                <constraint firstAttribute="trailing" secondItem="Wdu-VB-95p" secondAttribute="trailing" constant="15" id="GcQ-cR-QQ9"/>
                 <constraint firstItem="dNU-MM-xGA" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="HUi-mY-ali"/>
-                <constraint firstItem="Wdu-VB-95p" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="JWD-DT-3Un"/>
+                <constraint firstItem="qDV-Fg-gDK" firstAttribute="centerY" secondItem="QKa-Ru-iUd" secondAttribute="centerY" id="HgB-Hd-8gA"/>
                 <constraint firstAttribute="bottom" secondItem="dNU-MM-xGA" secondAttribute="bottom" id="QDq-ia-Hlc"/>
-                <constraint firstAttribute="bottom" secondItem="qDV-Fg-gDK" secondAttribute="bottom" id="YtF-cd-IVc"/>
-                <constraint firstItem="qDV-Fg-gDK" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="boJ-LT-CKf"/>
-                <constraint firstItem="dNU-MM-xGA" firstAttribute="leading" secondItem="QKa-Ru-iUd" secondAttribute="leading" constant="15" id="dbR-9I-Aem"/>
-                <constraint firstAttribute="bottom" secondItem="Wdu-VB-95p" secondAttribute="bottom" id="ek8-0z-iG0"/>
-                <constraint firstAttribute="bottom" secondItem="59b-R0-Mo4" secondAttribute="bottom" id="fib-iI-BGA"/>
-                <constraint firstItem="59b-R0-Mo4" firstAttribute="leading" secondItem="QKa-Ru-iUd" secondAttribute="leading" id="get-w3-MY6"/>
-                <constraint firstAttribute="trailing" secondItem="Wdu-VB-95p" secondAttribute="trailing" constant="15" id="muE-gL-yyM"/>
-                <constraint firstAttribute="trailing" secondItem="59b-R0-Mo4" secondAttribute="trailing" id="oCu-hI-SHP"/>
+                <constraint firstAttribute="bottom" secondItem="Wdu-VB-95p" secondAttribute="bottom" id="QZz-r9-SfP"/>
+                <constraint firstAttribute="bottom" secondItem="59b-R0-Mo4" secondAttribute="bottom" id="Sbw-bC-yzh"/>
+                <constraint firstItem="qCy-rO-SOg" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="a80-TX-G7X"/>
+                <constraint firstItem="59b-R0-Mo4" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="ayy-3r-EwH"/>
+                <constraint firstItem="59b-R0-Mo4" firstAttribute="leading" secondItem="QKa-Ru-iUd" secondAttribute="leading" id="bJp-dk-qWi"/>
+                <constraint firstItem="qCy-rO-SOg" firstAttribute="leading" secondItem="QKa-Ru-iUd" secondAttribute="leading" id="f5T-N5-pRm"/>
+                <constraint firstItem="Wdu-VB-95p" firstAttribute="top" secondItem="QKa-Ru-iUd" secondAttribute="top" id="pT4-Qa-7on"/>
+                <constraint firstItem="dNU-MM-xGA" firstAttribute="leading" secondItem="QKa-Ru-iUd" secondAttribute="leading" constant="15" id="prn-b4-wZZ"/>
+                <constraint firstItem="qDV-Fg-gDK" firstAttribute="leading" secondItem="dNU-MM-xGA" secondAttribute="trailing" constant="30" id="qvN-eM-Zcc"/>
+                <constraint firstItem="qDV-Fg-gDK" firstAttribute="width" secondItem="dNU-MM-xGA" secondAttribute="width" id="us1-7C-1b7"/>
+                <constraint firstItem="qDV-Fg-gDK" firstAttribute="height" secondItem="dNU-MM-xGA" secondAttribute="height" id="vxk-qL-Lc2"/>
+                <constraint firstAttribute="trailing" secondItem="59b-R0-Mo4" secondAttribute="trailing" id="xi7-Cn-vQC"/>
+                <constraint firstAttribute="trailing" secondItem="qCy-rO-SOg" secondAttribute="trailing" id="y6J-lu-7Gd"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1dE-Yb-6QV"/>
+                    <exclude reference="HUi-mY-ali"/>
+                    <exclude reference="QDq-ia-Hlc"/>
+                </mask>
+            </variation>
             <connections>
+                <outlet property="msgLabel" destination="qCy-rO-SOg" id="HxW-ut-8Bl"/>
                 <outlet property="nextBtn" destination="qDV-Fg-gDK" id="UV9-Y9-IEn"/>
                 <outlet property="preBtn" destination="dNU-MM-xGA" id="hYT-Hl-cUB"/>
             </connections>
-            <point key="canvasLocation" x="467" y="340"/>
+            <point key="canvasLocation" x="463" y="325"/>
         </view>
     </objects>
+    <resources>
+        <image name="CoreTFManagerVC.bundle/left.png" width="16" height="16"/>
+        <image name="CoreTFManagerVC.bundle/right.png" width="16" height="16"/>
+    </resources>
 </document>

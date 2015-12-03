@@ -14,9 +14,6 @@
 //textField
 @property (nonatomic,strong) UITextField *textField;
 
-//textField的名称
-@property (nonatomic,copy) NSString *name;
-
 //textField在window中的frame
 @property (nonatomic,assign) CGRect textFiledWindowFrame;
 
@@ -38,7 +35,7 @@
  *
  *  @return 实例
  */
-+(instancetype)modelWithTextFiled:(UITextField *)textField inputView:(UIView *)inputView name:(NSString *)name insetBottom:(CGFloat)insetBottom;
++(instancetype)modelWithTextFiled:(UITextField *)textField inputView:(UIView *)inputView insetBottom:(CGFloat)insetBottom;
 
 
 /**

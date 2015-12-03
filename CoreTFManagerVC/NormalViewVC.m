@@ -38,11 +38,11 @@
     
         UIDatePicker *picker=[[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
         
-        TFModel *tfm1=[TFModel modelWithTextFiled:_tf1 inputView:nil name:@"tf1" insetBottom:0];
-        TFModel *tfm2=[TFModel modelWithTextFiled:_tf2 inputView:picker name:@"tf2" insetBottom:0];
-        TFModel *tfm3=[TFModel modelWithTextFiled:_tf3 inputView:nil name:@"tf3" insetBottom:0];
-        TFModel *tfm4=[TFModel modelWithTextFiled:_tf4 inputView:nil name:@"tf4" insetBottom:40];
-        TFModel *tfm5=[TFModel modelWithTextFiled:_tf5 inputView:nil name:@"tf5" insetBottom:0];
+        TFModel *tfm1=[TFModel modelWithTextFiled:_tf1 inputView:nil insetBottom:0];
+        TFModel *tfm2=[TFModel modelWithTextFiled:_tf2 inputView:picker insetBottom:0];
+        TFModel *tfm3=[TFModel modelWithTextFiled:_tf3 inputView:nil insetBottom:0];
+        TFModel *tfm4=[TFModel modelWithTextFiled:_tf4 inputView:nil insetBottom:40];
+        TFModel *tfm5=[TFModel modelWithTextFiled:_tf5 inputView:nil insetBottom:0];
         
         return @[tfm1,tfm2,tfm3,tfm4,tfm5];
         

@@ -185,7 +185,8 @@
     
     //记录
     self.currentTFModel=[TFModel findTextField:textField fromTFModels:self.tfModels];
-
+    CoreTFKeyBoardToolBarView *toolBarView = (CoreTFKeyBoardToolBarView *)textField.inputAccessoryView;
+    toolBarView.msg = textField.placeholder;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self adjustFrame];
     });
@@ -276,9 +277,6 @@
         
         //设置代理
         textField.delegate=self;
-        
-        //设置placeHolder
-        if(textField.placeholder==nil) textField.placeholder=tfm.name;
         
         //设置键盘
         if(tfm.inputView!=nil) textField.inputView=tfm.inputView;

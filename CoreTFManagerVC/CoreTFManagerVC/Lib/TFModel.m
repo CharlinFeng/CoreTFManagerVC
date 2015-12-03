@@ -18,15 +18,13 @@
  *
  *  @return 实例
  */
-+(instancetype)modelWithTextFiled:(UITextField *)textField inputView:(UIView *)inputView name:(NSString *)name insetBottom:(CGFloat)insetBottom{
++(instancetype)modelWithTextFiled:(UITextField *)textField inputView:(UIView *)inputView insetBottom:(CGFloat)insetBottom{
     
     TFModel *tfm=[[TFModel alloc] init];
     
     tfm.textField=textField;
     
     tfm.inputView=inputView;
-    
-    tfm.name=name;
     
     tfm.insetBottom=insetBottom;
     

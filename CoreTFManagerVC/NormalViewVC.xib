@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NormalViewVC">
@@ -21,6 +22,7 @@
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tcO-JK-sHL">
                     <rect key="frame" x="52" y="80" width="97" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Wgi-F8-lmH"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="YHr-n3-pew"/>
@@ -35,17 +37,9 @@
                         </mask>
                     </variation>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SKQ-lq-KUO">
-                    <rect key="frame" x="52" y="285" width="97" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="2xF-fn-vOI"/>
-                        <constraint firstAttribute="width" constant="97" id="DTe-g9-qsl"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Laz-wd-5a8">
                     <rect key="frame" x="52" y="415" width="97" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="97" id="JZe-yU-jmA"/>
                         <constraint firstAttribute="height" constant="30" id="U6u-KB-Kxw"/>
@@ -55,6 +49,7 @@
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rFG-ok-AZ9">
                     <rect key="frame" x="52" y="525" width="97" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="LnZ-db-cnX"/>
                         <constraint firstAttribute="width" constant="97" id="gNn-YH-JhJ"/>
@@ -62,8 +57,9 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lAX-WD-dVM">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lAX-WD-dVM">
                     <rect key="frame" x="52" y="205" width="97" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Edf-qs-VAS"/>
                         <constraint firstAttribute="width" constant="97" id="IKw-p5-ff8"/>
@@ -71,7 +67,18 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SKQ-lq-KUO">
+                    <rect key="frame" x="52" y="285" width="97" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="2xF-fn-vOI"/>
+                        <constraint firstAttribute="width" constant="97" id="DTe-g9-qsl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="SKQ-lq-KUO" secondAttribute="centerY" id="EnN-Oc-eCv"/>

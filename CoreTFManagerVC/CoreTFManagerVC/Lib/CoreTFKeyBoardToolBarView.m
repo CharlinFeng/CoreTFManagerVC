@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *nextBtn;
 
+@property (weak, nonatomic) IBOutlet UILabel *msgLabel;
 
 
 
@@ -23,6 +24,15 @@
 
 
 @implementation CoreTFKeyBoardToolBarView
+
+-(void)awakeFromNib{
+    
+    [super awakeFromNib];
+    
+    self.preBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.nextBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
+}
+
 
 +(instancetype)keyBoardToolBarView{
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
@@ -60,5 +70,7 @@
     
     _nextBtn.enabled=!isLast;
 }
+
+-(void)setMsg:(NSString *)msg{_msg=msg; self.msgLabel.text = msg;}
 
 @end

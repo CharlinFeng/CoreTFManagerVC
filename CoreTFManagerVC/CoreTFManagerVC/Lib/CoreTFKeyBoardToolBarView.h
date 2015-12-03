@@ -20,6 +20,7 @@
 
 @property (nonatomic,assign) BOOL isLast;                                                       //到达最后一个按钮
 
+@property (nonatomic,copy) NSString *msg;
 
 +(instancetype)keyBoardToolBarView;
 

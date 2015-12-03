@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEBEE5FF1C10681600BAA16B /* CoreTFManagerVC.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEBEE5FE1C10681600BAA16B /* CoreTFManagerVC.bundle */; };
 		D6D2395A1AA89BDF003B999A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D239591AA89BDF003B999A /* main.m */; };
 		D6D2395D1AA89BDF003B999A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D2395C1AA89BDF003B999A /* AppDelegate.m */; };
 		D6D239631AA89BDF003B999A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D239611AA89BDF003B999A /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEBEE5FE1C10681600BAA16B /* CoreTFManagerVC.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CoreTFManagerVC.bundle; sourceTree = "<group>"; };
 		D6D239541AA89BDF003B999A /* CoreTFManagerVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreTFManagerVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D239581AA89BDF003B999A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D239591AA89BDF003B999A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		EE8228DF1AC17026004049D7 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				CEBEE5FE1C10681600BAA16B /* CoreTFManagerVC.bundle */,
 				EE8228E01AC17026004049D7 /* CoreTFKeyBoardToolBarView.h */,
 				EE8228E11AC17026004049D7 /* CoreTFKeyBoardToolBarView.m */,
 				EE8228E21AC17026004049D7 /* CoreTFKeyBoardToolBarView.xib */,
@@ -279,6 +282,7 @@
 				EE63202B1AA954B9007BE4FB /* ScrollViewVC.xib in Resources */,
 				D6D239651AA89BDF003B999A /* Images.xcassets in Resources */,
 				EE5A8A5B1AA989C8000BA4AE /* 1.png in Resources */,
+				CEBEE5FF1C10681600BAA16B /* CoreTFManagerVC.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
