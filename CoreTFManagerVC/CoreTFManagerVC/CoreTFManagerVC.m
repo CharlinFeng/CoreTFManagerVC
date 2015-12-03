@@ -269,6 +269,8 @@
 
 -(void)setTfModels:(NSArray *)tfModels{
     
+    if(tfModels.count == 1){self.keyBoardToolBarView.hideToggleBtnsForSingleTF=YES;}
+    
     //遍历所有文本框
     [tfModels enumerateObjectsUsingBlock:^(TFModel *tfm, NSUInteger idx, BOOL *stop) {
         
@@ -501,6 +503,7 @@
     
     self.tfModels=nil;
 }
+
 
 
 @end

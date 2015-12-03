@@ -22,6 +22,10 @@
 
 @property (nonatomic,copy) NSString *msg;
 
+@property (nonatomic,assign) BOOL hideToggleBtnsForSingleTF;
+
 +(instancetype)keyBoardToolBarView;
+
+
 
 @end

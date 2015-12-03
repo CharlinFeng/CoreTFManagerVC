@@ -73,4 +73,10 @@
 
 -(void)setMsg:(NSString *)msg{_msg=msg; self.msgLabel.text = msg;}
 
+-(void)setHideToggleBtnsForSingleTF:(BOOL)hideToggleBtnsForSingleTF{
+    _hideToggleBtnsForSingleTF = hideToggleBtnsForSingleTF;
+    if(!hideToggleBtnsForSingleTF) return;
+    self.preBtn.hidden = YES; self.nextBtn.hidden=YES;
+}
+
 @end

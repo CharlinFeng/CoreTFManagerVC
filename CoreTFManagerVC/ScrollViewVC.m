@@ -59,7 +59,7 @@
         TFModel *tfm5=[TFModel modelWithTextFiled:_tf5 inputView:nil insetBottom:0];
         TFModel *tfm6=[TFModel modelWithTextFiled:_tf6 inputView:nil insetBottom:0];
         
-        return @[tfm1,tfm2,tfm3,tfm4,tfm5,tfm6];
+        return @[tfm6];
         
     }];
 }
